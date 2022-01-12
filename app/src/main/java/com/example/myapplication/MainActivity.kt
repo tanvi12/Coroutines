@@ -52,10 +52,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
     val handler = CoroutineExceptionHandler { context, exception ->
         println("Exception thrown somewhere within parent or child: $exception.")
     }
+
 
     val childExceptionHandler = CoroutineExceptionHandler{ _, exception ->
         println("Exception thrown in one of the children: $exception.")
